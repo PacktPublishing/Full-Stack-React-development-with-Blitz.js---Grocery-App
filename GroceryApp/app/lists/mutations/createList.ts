@@ -5,6 +5,7 @@ import * as z from "zod"
 const CreateList = z
   .object({
     name: z.string(),
+    userId: z.number(),
   })
   .nonstrict()
 

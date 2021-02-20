@@ -5,6 +5,7 @@ import * as z from "zod"
 const CreateItem = z
   .object({
     name: z.string(),
+    listId: z.number(),
   })
   .nonstrict()
 
