@@ -2,6 +2,6 @@
 .env*
 *.ico
 *.lock
-db/migrations
+db/migrations_sqlite
 .next
 .blitz
