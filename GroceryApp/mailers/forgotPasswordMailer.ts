@@ -4,7 +4,8 @@
  * and then export it. That way you can import here and anywhere else
  * and use it straight away.
  */
-import previewEmail from "preview-email"
+// import previewEmail from "preview-email"
+import nodemailerDriver from "integrations/nodemailer"
 
 type ResetPasswordMailer = {
   to: string
@@ -38,7 +39,8 @@ export function forgotPasswordMailer({ to, token }: ResetPasswordMailer) {
         throw new Error("No production email implementation in mailers/forgotPasswordMailer")
       } else {
         // Preview email in the browser
-        await previewEmail(msg)
+        // await previewEmail(msg)
+        await nodemailerDriver().send(msg)
       }
     },
   }
