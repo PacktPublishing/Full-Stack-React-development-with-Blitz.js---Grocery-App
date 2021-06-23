@@ -1,5 +1,5 @@
 {
-  "name": "GroceryApp",
+  "name": "grocery-app",
   "version": "1.0.0",
   "scripts": {
     "dev": "blitz dev",
@@ -30,7 +30,8 @@
     "react": "alpha",
     "zod": "3.2.0",
     "final-form": "4.20.2",
-    "react-final-form": "6.5.3"
+    "react-final-form": "6.5.3",
+    "nodemailer": "6.6.2"
   },
   "devDependencies": {
     "@types/preview-email": "2.0.0",
