@@ -28,6 +28,8 @@ const UserInfo = () => {
           User id: <code>{currentUser.id}</code>
           <br />
           User role: <code>{currentUser.role}</code>
+          <br />
+          Active: <code>{currentUser.active ? "TRUE" : "FALSE"}</code>
         </div>
       </>
     )
