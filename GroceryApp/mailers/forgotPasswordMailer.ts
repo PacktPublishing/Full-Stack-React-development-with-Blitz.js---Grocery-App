@@ -6,6 +6,8 @@
  */
 // import previewEmail from "preview-email"
 import nodemailerDriver from "integrations/nodemailer"
+import sendgridDriver from "integrations/sendgrid"
+// import postmarkDriver from "integrations/postmark"
 
 type ResetPasswordMailer = {
   to: string
@@ -34,9 +36,8 @@ export function forgotPasswordMailer({ to, token }: ResetPasswordMailer) {
   return {
     async send() {
       if (process.env.NODE_ENV === "production") {
-        // TODO - send the production email, like this:
-        // await postmark.sendEmail(msg)
-        throw new Error("No production email implementation in mailers/forgotPasswordMailer")
+        await sendgridDriver().send(msg)
+        // await postmarkDriver().send(msg)
       } else {
         // Preview email in the browser
         // await previewEmail(msg)
