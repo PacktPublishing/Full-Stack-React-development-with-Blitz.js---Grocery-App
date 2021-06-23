@@ -24,6 +24,7 @@ model User {
   tokens   Token[]
   sessions Session[]
   List     List[]
+  active   Boolean   @default(false)
 }
 
 model Session {
