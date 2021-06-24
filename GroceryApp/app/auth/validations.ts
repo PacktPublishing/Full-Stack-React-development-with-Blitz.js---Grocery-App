@@ -31,3 +31,7 @@ export const ChangePassword = z.object({
   currentPassword: z.string(),
   newPassword: password,
 })
+
+export const EmailVerification = z.object({
+  token: z.string(),
+})
